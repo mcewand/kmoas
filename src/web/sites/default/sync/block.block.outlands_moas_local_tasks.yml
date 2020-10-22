@@ -1,0 +1,22 @@
+uuid: e1b2fc21-a0f9-47e4-9bc8-d29c6dcc4ca3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: 3wV-8WzENa5lVh3Ah1PrjOzkUANvgV8XaHbux7KeAdM
+id: outlands_moas_local_tasks
+theme: outlands_moas
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

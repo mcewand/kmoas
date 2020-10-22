@@ -1,0 +1,34 @@
+uuid: f9463390-23a4-4900-ac79-160d093bf77c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contributor
+  module:
+    - ctools
+    - views
+  theme:
+    - outlands_moas
+id: outlands_moas_views_block__contributor_block_1
+theme: outlands_moas
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'views_block:contributor-block_1'
+settings:
+  id: 'views_block:contributor-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      class: class
+      project: project
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

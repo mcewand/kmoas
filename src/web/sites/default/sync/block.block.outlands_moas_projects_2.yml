@@ -1,0 +1,33 @@
+uuid: 9e61e224-a86f-42c2-bd3e-7dc78c605263
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.projects
+  module:
+    - system
+    - user
+  theme:
+    - outlands_moas
+id: outlands_moas_projects_2
+theme: outlands_moas
+region: sidebar_second
+weight: -3
+provider: null
+plugin: 'system_menu_block:projects'
+settings:
+  id: 'system_menu_block:projects'
+  label: Contribute
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

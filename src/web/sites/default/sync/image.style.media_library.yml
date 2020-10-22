@@ -5,6 +5,8 @@ dependencies:
   enforced:
     module:
       - media_library
+  module:
+    - image_effects
 _core:
   default_config_hash: 7qJqToD1OQLAyeswpmg7M0LRxQlw1URQkJDWUJCnmR8
 name: media_library
@@ -18,3 +20,9 @@ effects:
       width: 220
       height: 220
       upscale: false
+  ec2c4f70-29f5-4bc2-95ca-d5f8359d1e5e:
+    uuid: ec2c4f70-29f5-4bc2-95ca-d5f8359d1e5e
+    id: image_effects_auto_orient
+    weight: 2
+    data:
+      scan_exif: true

@@ -1,0 +1,33 @@
+uuid: 1474bb74-6515-4460-9180-47bb83af45cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.anonymous-menu
+  module:
+    - system
+    - user
+  theme:
+    - outlands_moas
+id: outlands_moas_anonymousmenu
+theme: outlands_moas
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'system_menu_block:anonymous-menu'
+settings:
+  id: 'system_menu_block:anonymous-menu'
+  label: 'Anonymous Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

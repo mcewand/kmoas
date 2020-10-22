@@ -1,0 +1,22 @@
+uuid: 7fe9cc6d-4c1d-4bb4-881d-a9aea1a10d5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: bSh87nayw-Fh7x0auxPJoNHFokn1zFwX9KSyLpcH0Bg
+id: outlands_moas_content
+theme: outlands_moas
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

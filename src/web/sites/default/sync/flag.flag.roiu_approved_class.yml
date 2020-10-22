@@ -1,0 +1,30 @@
+uuid: fbdbe84b-38de-49a2-8b8f-e60923e52247
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: roiu_approved_class
+label: 'ROIU Approved Class'
+bundles:
+  - class
+entity_type: node
+global: true
+weight: 0
+flag_short: 'Approve this Class'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unapprove this Class'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: reload
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: false
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

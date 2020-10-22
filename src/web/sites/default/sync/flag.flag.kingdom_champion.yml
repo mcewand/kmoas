@@ -1,0 +1,30 @@
+uuid: 88bbd562-4fac-4bfb-9aca-3cd41ec7e7c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: kingdom_champion
+label: 'Kingdom A&S Champion'
+bundles:
+  - project
+entity_type: node
+global: true
+weight: 0
+flag_short: 'Competition Winner'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Remove Flag'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: false
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

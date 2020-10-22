@@ -1,0 +1,23 @@
+uuid: 06c7d623-dfb7-487e-9e84-ef172d1dce98
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: BsbW26bDVnavqpfRuOp3gecOtsVAsF3_ATPD5E856-4
+id: outlands_moas_search
+theme: outlands_moas
+region: sidebar_second
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

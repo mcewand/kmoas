@@ -1,0 +1,14 @@
+uuid: e61de80a-9fdd-459b-94d8-ee8325a6c149
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.roiu
+  module:
+    - user
+id: user_remove_role_action.roiu
+label: 'Remove the ROIU role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: roiu

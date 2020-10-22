@@ -1,7 +1,9 @@
 uuid: e0628326-9fc4-4a70-8ee5-0508c4001e3b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 name: gallery_grid
 label: 'Gallery Grid'
 effects:
@@ -13,3 +15,9 @@ effects:
       width: 220
       height: 220
       anchor: center-center
+  c90f5ed2-ff14-45dc-b449-3dff83f655c3:
+    uuid: c90f5ed2-ff14-45dc-b449-3dff83f655c3
+    id: image_effects_auto_orient
+    weight: 2
+    data:
+      scan_exif: true

@@ -1,0 +1,25 @@
+uuid: aab3c279-488e-4833-a5b0-e9b21ec8eebc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: 3kluVX6xVfYuKg2AKx3K6lVMrllIykqTJoy7HsrOwPI
+id: outlands_moas_branding
+theme: outlands_moas
+region: header
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 7575bd33-7d2c-4e39-8c80-afaa6f3899f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: yPe8aG4-T4XsmxadKilWNIHBBZQBkV6AqEiSoijGxT8
+id: outlands_moas_breadcrumbs
+theme: outlands_moas
+region: breadcrumb
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 0cbfcbc3-5a1c-4ea6-84c7-d378b263ee83
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.roiu_approved_class
+  module:
+    - flag
+id: flag_action.roiu_approved_class_flag
+label: 'Approve this Class'
+type: node
+plugin: 'flag_action:roiu_approved_class_flag'
+configuration:
+  flag_id: roiu_approved_class
+  flag_action: flag

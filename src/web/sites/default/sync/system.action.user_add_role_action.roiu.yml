@@ -1,0 +1,14 @@
+uuid: c64853de-d105-4641-9302-6565425d8d6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.roiu
+  module:
+    - user
+id: user_add_role_action.roiu
+label: 'Add the ROIU role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: roiu

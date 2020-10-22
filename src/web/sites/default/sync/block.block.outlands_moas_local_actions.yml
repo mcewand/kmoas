@@ -1,0 +1,20 @@
+uuid: 13f549c4-1e7f-40e9-bc1c-8235ab4d708c
+langcode: en
+status: false
+dependencies:
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: w-d6upw9OPYM56rV28IpC2TTtjXIzNCgfXBECIjwMLI
+id: outlands_moas_local_actions
+theme: outlands_moas
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

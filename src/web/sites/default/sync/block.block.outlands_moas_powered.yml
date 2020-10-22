@@ -1,0 +1,22 @@
+uuid: 3c1c48d9-ff67-4c85-af2e-ce2f5222c7db
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: 77s443SbxpaD9wY75o720nAWsS4ejvWvH927ouPRinU
+id: outlands_moas_powered
+theme: outlands_moas
+region: auto_hidden_block
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

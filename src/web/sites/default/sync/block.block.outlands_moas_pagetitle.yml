@@ -1,0 +1,18 @@
+uuid: 6dac027b-c70e-40d6-a021-8a5098be48f4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - outlands_moas
+id: outlands_moas_pagetitle
+theme: outlands_moas
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 5e143895-ab66-4a16-9648-018a09ba99d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sca_contributor_user
+  module:
+    - system
+    - views
+  theme:
+    - outlands_moas
+id: outlands_moas_views_block__sca_contributor_user_block_1
+theme: outlands_moas
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'views_block:sca_contributor_user-block_1'
+settings:
+  id: 'views_block:sca_contributor_user-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/gallery/user/*'
+    negate: false
+    context_mapping: {  }

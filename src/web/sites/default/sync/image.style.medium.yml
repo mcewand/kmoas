@@ -1,7 +1,9 @@
 uuid: 0d4f2f22-0c81-4117-a5ed-741f514b0784
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - image_effects
 _core:
   default_config_hash: Y9NmnZHQq20ASSyTNA6JnwtWrJJiSajOehGDtmUFdM0
 name: medium
@@ -15,3 +17,9 @@ effects:
       width: 220
       height: 220
       upscale: false
+  234d6e77-31ad-4fc1-91de-4afc49b2428e:
+    uuid: 234d6e77-31ad-4fc1-91de-4afc49b2428e
+    id: image_effects_auto_orient
+    weight: 2
+    data:
+      scan_exif: true

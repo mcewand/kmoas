@@ -1,0 +1,20 @@
+uuid: 8f1ea762-baa0-447d-b663-d2a9ee99d638
+langcode: en
+status: false
+dependencies:
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: Uo7mONWwEPmaIaUHkp0yL_8OIiMBVxU4mxNzTss18zA
+id: outlands_moas_page_title
+theme: outlands_moas
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

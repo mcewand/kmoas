@@ -1,0 +1,35 @@
+uuid: c9c7d3f9-ab3c-4a9c-8a25-32261a77e59d
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+    - user
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: tSBzrrtzR5T5J4udKazBEykZ0ew9Xr0P4e6F8NPNNx8
+id: outlands_moas_account_menu
+theme: outlands_moas
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,30 @@
+uuid: 06b6bcaa-0220-48f9-9253-ecfd9a7428cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.competitions
+  module:
+    - system
+    - views
+  theme:
+    - outlands_moas
+id: outlands_moas_views_block__competitions_block_1_2
+theme: outlands_moas
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:competitions-block_1'
+settings:
+  id: 'views_block:competitions-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /competitions
+    negate: false
+    context_mapping: {  }

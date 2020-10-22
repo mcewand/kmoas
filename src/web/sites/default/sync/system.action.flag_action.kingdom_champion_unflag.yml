@@ -1,0 +1,15 @@
+uuid: 61cbc9e4-8d93-4820-8060-8539fc820a73
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.kingdom_champion
+  module:
+    - flag
+id: flag_action.kingdom_champion_unflag
+label: 'Remove Flag'
+type: node
+plugin: 'flag_action:kingdom_champion_unflag'
+configuration:
+  flag_id: kingdom_champion
+  flag_action: unflag

@@ -1,0 +1,22 @@
+uuid: 752a4943-8656-437a-b464-558a769954fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - outlands_moas
+_core:
+  default_config_hash: IZ4yckD5ZErvQdUEXCKgME5sVt_4E5O-gHYiletWntE
+id: outlands_moas_messages
+theme: outlands_moas
+region: highlighted
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
