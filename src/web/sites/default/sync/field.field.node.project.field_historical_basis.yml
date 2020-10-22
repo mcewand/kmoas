@@ -1,0 +1,21 @@
+uuid: 3b8a7581-d8b0-47ec-aaab-20bc32aba6f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_historical_basis
+    - node.type.project
+  module:
+    - text
+id: node.project.field_historical_basis
+field_name: field_historical_basis
+entity_type: node
+bundle: project
+label: 'Historical Basis'
+description: 'What is this based on, or inspired by? (Give the name of or information about the an artifact, illustration or painting, or historical document.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: e50615f5-2346-4895-8702-100a94cffb1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.class
+id: node.class.title
+field_name: title
+entity_type: node
+bundle: class
+label: 'Class Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

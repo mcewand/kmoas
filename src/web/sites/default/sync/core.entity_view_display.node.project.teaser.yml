@@ -1,0 +1,44 @@
+uuid: eb53db91-f803-4086-bb1a-fbb3272241d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.field_categories
+    - field.field.node.project.field_class_video
+    - field.field.node.project.field_compete_for_champion
+    - field.field.node.project.field_competition
+    - field.field.node.project.field_date_completed
+    - field.field.node.project.field_documentation
+    - field.field.node.project.field_historical_basis
+    - field.field.node.project.field_permission_to_display
+    - field.field.node.project.field_procedure
+    - field.field.node.project.field_project_images
+    - field.field.node.project.field_sources
+    - field.field.node.project.field_tools_materials
+    - node.type.project
+  module:
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_categories: true
+  field_class_video: true
+  field_compete_for_champion: true
+  field_competition: true
+  field_date_completed: true
+  field_documentation: true
+  field_historical_basis: true
+  field_permission_to_display: true
+  field_procedure: true
+  field_project_images: true
+  field_sources: true
+  field_tools_materials: true

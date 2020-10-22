@@ -1,0 +1,10 @@
+uuid: e91d75fd-c804-41f6-a3bc-e8e4c58c8d53
+langcode: en
+status: true
+dependencies: {  }
+id: judge
+label: Judge
+weight: -5
+is_admin: null
+permissions:
+  - 'search content'

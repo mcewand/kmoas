@@ -1,0 +1,26 @@
+uuid: c032e200-a79d-451f-b41e-be9c37ed7349
+langcode: en
+status: true
+dependencies: {  }
+id: contributor
+label: Contributor
+weight: -6
+is_admin: null
+permissions:
+  - 'create class content'
+  - 'create image media'
+  - 'create project content'
+  - 'create video media'
+  - 'delete own class content'
+  - 'delete own image media'
+  - 'delete own project content'
+  - 'delete own video media'
+  - 'edit own class content'
+  - 'edit own image media'
+  - 'edit own project content'
+  - 'edit own video media'
+  - 'search content'
+  - 'use text format wysiwyg_light'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'

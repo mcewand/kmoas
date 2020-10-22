@@ -1,0 +1,21 @@
+uuid: 60e82109-0fd2-49d3-a4f0-f832e95c7f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_procedure
+    - node.type.project
+  module:
+    - text
+id: node.project.field_procedure
+field_name: field_procedure
+entity_type: node
+bundle: project
+label: Procedure
+description: 'As you describe how you made this item, consider answering some of these additional questions. How did you come up with the techniques you used to make it? Why did you use this particular procedure? Are there any particular steps you would change if you were to do this project again?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

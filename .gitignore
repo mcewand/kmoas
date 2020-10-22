@@ -1,0 +1,16 @@
+#Ignore unnecessary docker structures
+etc/mysql/*
+
+#Exclude things included by composer
+src/web/themes/contrib/
+src/web/core/
+src/web/libraries/
+src/vendor/
+
+
+
+# Exclude drupal site-specific stuff
+src/web/sites/*/settings*.php
+src/web/sites/*/files
+
+

@@ -1,0 +1,25 @@
+uuid: 91a566ac-eb1c-4dfc-8d2f-bcddd67f3741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competition
+    - node.type.project
+id: node.project.field_competition
+field_name: field_competition
+entity_type: node
+bundle: project
+label: Competition
+description: 'Select a competition if you wish to enter this project.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: competitions
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

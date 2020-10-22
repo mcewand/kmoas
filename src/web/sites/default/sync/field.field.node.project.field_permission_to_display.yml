@@ -1,0 +1,23 @@
+uuid: 8f0e9a12-8dd5-4af5-bd07-dad833774a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_permission_to_display
+    - node.type.project
+id: node.project.field_permission_to_display
+field_name: field_permission_to_display
+entity_type: node
+bundle: project
+label: 'I grant permission for this to be displayed publicly.'
+description: 'If you do not grant permission, then this will be available to judges during the selected event.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

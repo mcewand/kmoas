@@ -1,0 +1,27 @@
+uuid: 0f1001a4-98d5-4c5f-838d-eb9e3b210799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_handouts
+    - node.type.class
+  module:
+    - file
+id: node.class.field_handouts
+field_name: field_handouts
+entity_type: node
+bundle: class
+label: Handouts
+description: 'Add up to 4 class handouts in txt or pdf format.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

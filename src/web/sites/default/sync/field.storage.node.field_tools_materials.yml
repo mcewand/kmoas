@@ -1,0 +1,19 @@
+uuid: 0e2ce002-b5e0-489b-93f9-ea5ade220dad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_tools_materials
+field_name: field_tools_materials
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

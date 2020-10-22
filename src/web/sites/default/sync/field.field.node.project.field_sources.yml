@@ -1,0 +1,21 @@
+uuid: ad5f42f9-bf34-40af-969d-7090df6123f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sources
+    - node.type.project
+  module:
+    - text
+id: node.project.field_sources
+field_name: field_sources
+entity_type: node
+bundle: project
+label: Sources
+description: 'Provide a bibliography or list of the books, websites, and other sources you have used for researching this project, getting guidance on how to make it, and so on.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

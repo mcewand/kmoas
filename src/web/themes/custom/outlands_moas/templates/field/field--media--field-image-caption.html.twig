@@ -1,0 +1,17 @@
+
+{%
+  set classes = [
+    'w3-padding',
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    <div{{ item.attributes.addClass('w3-bar-item field__item') }}>{{ item.content }}</div>
+  {% endfor %}
+</div>
+

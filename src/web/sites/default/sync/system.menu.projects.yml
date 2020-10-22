@@ -1,0 +1,8 @@
+uuid: fb96ce1f-f95e-4929-9ca0-799c56bddcee
+langcode: en
+status: true
+dependencies: {  }
+id: projects
+label: Projects
+description: ''
+locked: false

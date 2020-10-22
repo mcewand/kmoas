@@ -1,0 +1,27 @@
+
+article.node--type-project .w3-section label {
+  font-size: 1.5em;
+}
+
+article.node--type-project .w3-section .project-images {
+  float: left;
+  min-height: 340px;
+  max-width: 275px;
+  overflow: hidden;
+}
+
+article.node--type-project .w3-section .project-images .field--name-field-image-caption {
+  font-size: .7em;
+  height: 80px;
+  overflow: hidden;
+}
+
+#node-project-edit-form .js-media-library-widget .js-media-library-item {
+  height: 450px;
+  float: left;
+  max-width: 25%;
+}
+
+#node-project-edit-form .js-media-library-widget .js-media-library-item .field--name-field-image-caption {
+  font-size: .75em;
+}

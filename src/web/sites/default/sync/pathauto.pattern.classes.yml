@@ -1,0 +1,22 @@
+uuid: 2938a0a4-4bff-491b-be8d-4fb14841ceb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: classes
+label: Classes
+type: 'canonical_entities:node'
+pattern: 'university/class/[node:nid]'
+selection_criteria:
+  43b4c709-6f4f-4cb1-bfa6-c27d760b0a13:
+    id: node_type
+    bundles:
+      class: class
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 43b4c709-6f4f-4cb1-bfa6-c27d760b0a13
+selection_logic: and
+weight: -5
+relationships: {  }

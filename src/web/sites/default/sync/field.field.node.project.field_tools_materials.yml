@@ -1,0 +1,21 @@
+uuid: 5638b189-c0df-4d64-bfc7-3f84e31e22db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tools_materials
+    - node.type.project
+  module:
+    - text
+id: node.project.field_tools_materials
+field_name: field_tools_materials
+entity_type: node
+bundle: project
+label: 'Tools & Materials'
+description: 'What did you use to make this item?  If it’s different from what would have been used to produce this sort of item in the Middle Ages or Renaissance, explain why you’ve chosen to use the tools materials you’ve used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

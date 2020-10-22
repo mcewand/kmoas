@@ -1,0 +1,22 @@
+uuid: 202c982b-b1a2-40d3-a7c7-22be40185ffe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: project_pages
+label: 'Project Pages'
+type: 'canonical_entities:node'
+pattern: 'project/[node:nid]'
+selection_criteria:
+  4065d1bf-408f-4688-849a-49df99946f3b:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4065d1bf-408f-4688-849a-49df99946f3b
+selection_logic: and
+weight: -5
+relationships: {  }
