@@ -24,6 +24,10 @@ docker exec -i moas_mysql_1 mysql -uroot -p12345 drupal < drupal.sql
 
 Copy modules, themes in place
 
+# Updating on remote server
+php -d memory_limit=2048M ~/.php/composer/composer install --prefer-dist
+
+# htaccess addition over scaffold:
 
 php_value upload_max_filesize 10M
 php_value post_max_size 10M

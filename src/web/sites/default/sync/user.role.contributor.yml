@@ -7,10 +7,13 @@ label: Contributor
 weight: -6
 is_admin: null
 permissions:
+  - 'access media overview'
   - 'create class content'
   - 'create image media'
+  - 'create media'
   - 'create project content'
   - 'create video media'
+  - 'delete media'
   - 'delete own class content'
   - 'delete own image media'
   - 'delete own project content'
@@ -20,6 +23,7 @@ permissions:
   - 'edit own project content'
   - 'edit own video media'
   - 'search content'
+  - 'update media'
   - 'use text format wysiwyg_light'
   - 'view media'
   - 'view own unpublished content'

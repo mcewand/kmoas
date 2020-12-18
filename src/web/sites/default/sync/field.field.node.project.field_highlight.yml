@@ -1,0 +1,29 @@
+uuid: 37086aa4-150c-48e7-861f-b48c7b650a67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlight
+    - node.type.project
+    - taxonomy.vocabulary.highlights
+id: node.project.field_highlight
+field_name: field_highlight
+entity_type: node
+bundle: project
+label: Highlight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      highlights: highlights
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

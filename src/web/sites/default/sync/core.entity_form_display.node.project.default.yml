@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.project.field_competition
     - field.field.node.project.field_date_completed
     - field.field.node.project.field_documentation
+    - field.field.node.project.field_highlight
     - field.field.node.project.field_historical_basis
     - field.field.node.project.field_permission_to_display
     - field.field.node.project.field_procedure
@@ -87,6 +88,16 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_highlight:
+    weight: 101
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_historical_basis:
     weight: 3

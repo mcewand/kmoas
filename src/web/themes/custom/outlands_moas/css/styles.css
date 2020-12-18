@@ -16,6 +16,15 @@ article.node--type-project .w3-section .project-images .field--name-field-image-
   overflow: hidden;
 }
 
+article.node--type-project .field--name-field-highlight,
+.views-field-field-highlight {
+  color: white;
+  background-color: #4caf50;
+  padding: 5px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
 #node-project-edit-form .js-media-library-widget .js-media-library-item {
   height: 450px;
   float: left;

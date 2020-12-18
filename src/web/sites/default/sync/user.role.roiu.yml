@@ -6,4 +6,6 @@ id: roiu
 label: ROIU
 weight: -4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'flag roiu_approved_class'
+  - 'unflag roiu_approved_class'

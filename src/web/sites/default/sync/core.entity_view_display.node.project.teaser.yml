@@ -36,6 +36,7 @@ hidden:
   field_competition: true
   field_date_completed: true
   field_documentation: true
+  field_highlight: true
   field_historical_basis: true
   field_permission_to_display: true
   field_procedure: true
