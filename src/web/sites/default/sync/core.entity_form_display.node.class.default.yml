@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.class.field_categories
     - field.field.node.class.field_class_video
     - field.field.node.class.field_handouts
+    - field.field.node.class.field_roi
     - node.type.class
   module:
     - file
@@ -51,6 +52,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_roi:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   status:
     type: boolean_checkbox

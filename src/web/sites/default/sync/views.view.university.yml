@@ -3,14 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_roi
     - field.storage.user.field_sca_name
     - field.storage.user.field_sca_title
-    - flag.flag.roiu_approved_class
     - node.type.class
     - system.menu.main
   module:
-    - better_exposed_filters
-    - flag
     - node
     - user
 id: university
@@ -43,7 +41,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Apply
           reset_button: false
@@ -52,26 +50,6 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          text_input_required: 'Select any filter and click on Apply to see results'
-          text_input_required_format: wysiwyg_content
-          bef:
-            general:
-              autosubmit: true
-              autosubmit_exclude_textfield: false
-              autosubmit_textfield_delay: 500
-              autosubmit_hide: true
-              input_required: false
-              allow_secondary: false
-              secondary_label: 'Advanced options'
-              secondary_open: false
-            filter:
-              flagged:
-                plugin_id: bef_single
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
       pager:
         type: mini
         options:
@@ -105,8 +83,8 @@ display:
             title: title
             field_sca_title: field_sca_title
             field_sca_name: field_sca_name
-            nothing: nothing
             created: created
+            field_roi: field_roi
           info:
             title:
               sortable: true
@@ -129,16 +107,16 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            nothing:
-              sortable: false
-              default_sort_order: asc
+            created:
+              sortable: true
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            created:
+            field_roi:
               sortable: true
-              default_sort_order: desc
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -406,14 +384,14 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: field
-        flagged:
-          id: flagged
-          table: flagging
-          field: flagged
-          relationship: flag_relationship
+        field_roi:
+          id: field_roi
+          table: node__field_roi
+          field: field_roi
+          relationship: none
           group_type: group
           admin_label: ''
-          label: ROIU
+          label: 'ROIU Approved Class'
           exclude: false
           alter:
             alter_text: false
@@ -451,15 +429,26 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
-          type: custom
-          type_custom_true: Approved
-          type_custom_false: ''
-          not: 0
-          entity_type: flagging
-          plugin_id: flag_flagged
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: yes-no
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -478,29 +467,45 @@ display:
           id: type
           table: node_field_data
           field: type
+          value:
+            class: class
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_roi_value:
+          id: field_roi_value
+          table: node__field_roi
+          field: field_roi_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            class: class
+          operator: '='
+          value: All
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: type_op
-            label: 'Content type'
-            description: null
+            operator_id: ''
+            label: 'Show only ROIU Approved Classes'
+            description: ''
             use_operator: false
-            operator: type_op
+            operator: field_roi_value_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: type
+            identifier: field_roi_value
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            reduce: false
+              anonymous: '0'
+              administrator: '0'
+              officer: '0'
+              contributor: '0'
+              judge: '0'
+              roiu: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -513,56 +518,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-        flagged:
-          id: flagged
-          table: flagging
-          field: flagged
-          relationship: flag_relationship
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: All
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Show only ROIU Approved Classes'
-            description: ''
-            use_operator: false
-            operator: flagged_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: approved
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              officer: '0'
-              contributor: '0'
-              judge: '0'
-          is_grouped: false
-          group_info:
-            label: Flagged
-            description: null
-            identifier: flagged
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          entity_type: flagging
-          plugin_id: flag_filter
+          plugin_id: boolean
       sorts:
         created:
           id: created
@@ -579,7 +535,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Classes and Resources'
+      title: University
       header: {  }
       footer: {  }
       empty: {  }
@@ -595,25 +551,9 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: standard
-        flag_relationship:
-          id: flag_relationship
-          table: node_field_data
-          field: flag_relationship
-          relationship: none
-          group_type: group
-          admin_label: 'ROIU Approval'
-          required: false
-          flag: roiu_approved_class
-          user_scope: any
-          entity_type: node
-          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -624,6 +564,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_roi'
         - 'config:field.storage.user.field_sca_name'
         - 'config:field.storage.user.field_sca_title'
   page_1:
@@ -653,5 +594,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_roi'
         - 'config:field.storage.user.field_sca_name'
         - 'config:field.storage.user.field_sca_title'

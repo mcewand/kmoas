@@ -7,5 +7,7 @@ label: ROIU
 weight: -4
 is_admin: null
 permissions:
-  - 'flag roiu_approved_class'
-  - 'unflag roiu_approved_class'
+  - 'create field_roi'
+  - 'edit field_roi'
+  - 'edit own field_roi'
+  - 'view own field_roi'

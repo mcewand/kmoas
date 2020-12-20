@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.class.field_categories
     - field.field.node.class.field_class_video
     - field.field.node.class.field_handouts
+    - field.field.node.class.field_roi
     - node.type.class
   module:
     - file
@@ -53,6 +54,16 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_roi:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   links:
     weight: 0

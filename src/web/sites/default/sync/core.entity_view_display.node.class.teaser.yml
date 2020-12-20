@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.class.field_categories
     - field.field.node.class.field_class_video
     - field.field.node.class.field_handouts
+    - field.field.node.class.field_roi
     - node.type.class
   module:
     - text
@@ -34,3 +35,4 @@ hidden:
   field_categories: true
   field_class_video: true
   field_handouts: true
+  field_roi: true

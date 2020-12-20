@@ -12,4 +12,5 @@ permissions:
   - 'access content'
   - 'search content'
   - 'view field_highlight'
+  - 'view field_roi'
   - 'view media'
