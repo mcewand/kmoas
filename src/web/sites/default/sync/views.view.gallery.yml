@@ -14,6 +14,7 @@ dependencies:
     - taxonomy.vocabulary.categories
     - taxonomy.vocabulary.competition
   content:
+    - 'taxonomy_term:categories:5fd0c932-3737-4353-822e-7d0f5c630d1e'
     - 'taxonomy_term:competition:7231de15-5a42-43f2-a09c-a1335d9d9417'
   module:
     - datetime
@@ -576,6 +577,109 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_highlight'
+        - 'config:field.storage.node.field_project_images'
+        - 'config:field.storage.user.field_sca_name'
+        - 'config:field.storage.user.field_sca_title'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Choir Block'
+    position: 6
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: Performances
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            project: project
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            131: 131
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: categories
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
