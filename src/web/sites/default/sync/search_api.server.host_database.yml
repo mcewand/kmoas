@@ -1,0 +1,14 @@
+uuid: 8b5c727f-a0cc-4f10-b498-54258606ac94
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: host_database
+name: 'host database'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: partial

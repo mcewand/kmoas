@@ -1,0 +1,21 @@
+uuid: e35124d3-72c9-46cf-8ff3-bb436c426de1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.project
+  module:
+    - text
+id: node.project.field_notes
+field_name: field_notes
+entity_type: node
+bundle: project
+label: Notes
+description: 'Add additional information here.  e.g. a link to a blog post'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

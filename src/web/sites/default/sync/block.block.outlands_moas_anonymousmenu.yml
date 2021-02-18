@@ -12,7 +12,7 @@ dependencies:
 id: outlands_moas_anonymousmenu
 theme: outlands_moas
 region: sidebar_second
-weight: -9
+weight: -10
 provider: null
 plugin: 'system_menu_block:anonymous-menu'
 settings:

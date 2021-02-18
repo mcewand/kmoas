@@ -10,7 +10,9 @@ dependencies:
     - field.field.node.project.field_competition
     - field.field.node.project.field_date_completed
     - field.field.node.project.field_documentation
+    - field.field.node.project.field_highlight
     - field.field.node.project.field_historical_basis
+    - field.field.node.project.field_notes
     - field.field.node.project.field_permission_to_display
     - field.field.node.project.field_procedure
     - field.field.node.project.field_project_images
@@ -38,8 +40,10 @@ hidden:
   field_documentation: true
   field_highlight: true
   field_historical_basis: true
+  field_notes: true
   field_permission_to_display: true
   field_procedure: true
   field_project_images: true
   field_sources: true
   field_tools_materials: true
+  search_api_excerpt: true

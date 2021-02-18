@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.user.user.field_contact_number
     - field.field.user.user.field_i_grant_permission_for_thi
+    - field.field.user.user.field_local_group
     - field.field.user.user.field_modern_name
     - field.field.user.user.field_photo
     - field.field.user.user.field_sca_name
@@ -37,6 +38,12 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_local_group:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_modern_name:
     weight: 1
     settings:

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_form_mode.user.register
     - field.field.user.user.field_contact_number
     - field.field.user.user.field_i_grant_permission_for_thi
+    - field.field.user.user.field_local_group
     - field.field.user.user.field_modern_name
     - field.field.user.user.field_photo
     - field.field.user.user.field_sca_name
@@ -64,6 +65,7 @@ content:
     region: content
 hidden:
   field_i_grant_permission_for_thi: true
+  field_local_group: true
   field_photo: true
   language: true
   path: true

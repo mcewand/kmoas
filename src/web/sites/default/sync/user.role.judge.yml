@@ -7,4 +7,7 @@ label: Judge
 weight: -5
 is_admin: null
 permissions:
+  - 'access administration pages'
+  - 'access toolbar'
   - 'search content'
+  - 'view the administration theme'

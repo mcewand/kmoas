@@ -12,7 +12,7 @@ dependencies:
 id: outlands_moas_projects_2
 theme: outlands_moas
 region: sidebar_second
-weight: -3
+weight: -5
 provider: null
 plugin: 'system_menu_block:projects'
 settings:

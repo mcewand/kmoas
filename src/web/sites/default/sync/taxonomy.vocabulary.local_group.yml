@@ -1,0 +1,8 @@
+uuid: f5083b8f-df17-43d1-85bd-81a9de82822e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Local Group'
+vid: local_group
+description: ''
+weight: 0

@@ -12,7 +12,7 @@ dependencies:
 id: outlands_moas_views_block__sca_contributor_user_block_1
 theme: outlands_moas
 region: sidebar_second
-weight: -4
+weight: -6
 provider: null
 plugin: 'views_block:sca_contributor_user-block_1'
 settings:

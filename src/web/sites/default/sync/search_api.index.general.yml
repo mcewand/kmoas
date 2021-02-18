@@ -1,0 +1,150 @@
+uuid: ff49e383-91b3-4f36-a69a-c85a7b12f635
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+    - search_api
+  config:
+    - field.storage.node.field_documentation
+    - field.storage.node.field_historical_basis
+    - field.storage.node.field_procedure
+    - field.storage.node.field_tools_materials
+    - field.storage.user.field_sca_name
+    - field.storage.user.field_sca_title
+    - search_api.server.host_database
+id: general
+name: General
+description: ''
+read_only: false
+field_settings:
+  field_documentation:
+    label: Documentation
+    datasource_id: 'entity:node'
+    property_path: field_documentation
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_documentation
+  field_historical_basis:
+    label: 'Historical Basis'
+    datasource_id: 'entity:node'
+    property_path: field_historical_basis
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_historical_basis
+  field_procedure:
+    label: Procedure
+    datasource_id: 'entity:node'
+    property_path: field_procedure
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_procedure
+  field_sca_name:
+    label: 'SCA Name'
+    datasource_id: 'entity:user'
+    property_path: field_sca_name
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.user.field_sca_name
+  field_sca_title:
+    label: 'SCA Title'
+    datasource_id: 'entity:user'
+    property_path: field_sca_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_sca_title
+  field_tools_materials:
+    label: 'Tools & Materials'
+    datasource_id: 'entity:node'
+    property_path: field_tools_materials
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_tools_materials
+  name:
+    label: Name
+    datasource_id: 'entity:user'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - user
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 5
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Authored by'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - class
+        - project
+    languages:
+      default: false
+      selected:
+        - en
+  'entity:user':
+    languages:
+      default: false
+      selected:
+        - en
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - field_documentation
+      - field_historical_basis
+      - field_procedure
+      - field_sca_name
+      - field_sca_title
+      - field_tools_materials
+      - name
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  role_filter:
+    default: true
+    roles:
+      - administrator
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: host_database

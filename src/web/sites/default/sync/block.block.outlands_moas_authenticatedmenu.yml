@@ -12,7 +12,7 @@ dependencies:
 id: outlands_moas_authenticatedmenu
 theme: outlands_moas
 region: sidebar_second
-weight: -7
+weight: -9
 provider: null
 plugin: 'system_menu_block:authenticated-menu'
 settings:

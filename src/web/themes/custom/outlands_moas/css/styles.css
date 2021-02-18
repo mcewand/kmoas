@@ -34,3 +34,36 @@ article.node--type-project .field--name-field-highlight,
 #node-project-edit-form .js-media-library-widget .js-media-library-item .field--name-field-image-caption {
   font-size: .75em;
 }
+
+#block-site-search-block .form-item-search-api-fulltext label {
+  display: none;
+}
+
+#block-site-search-block .form-item-search-api-fulltext:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  background-color: transparent;
+}
+
+#block-site-search-block .form-item-search-api-fulltext input {
+  text-indent: 20px;
+}
+
+.view-site-search .views-field-field-sca-name,
+.view-site-search .views-field-title {
+  padding-top: 40px;
+}
+
+.view-site-search .views-field-field-photo,
+.view-site-search .views-field-field-project-images {
+  float: left;
+  padding: 20px;
+}
+
+.view-site-search .views-field-field-photo img,
+.view-site-search .views-field-field-project-images img {
+  max-width: 250px;
+}
